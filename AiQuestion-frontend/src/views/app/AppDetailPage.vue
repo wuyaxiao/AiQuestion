@@ -76,7 +76,7 @@ const data = ref<API.AppVO>({});
 
 // 获取登录用户
 const loginUserStore = useLoginUserStore();
-let loginUserId = loginUserStore.loginUser?.id;
+const loginUserId = loginUserStore.loginUser?.id;
 // 是否为本人创建
 const isMy = computed(() => {
   return loginUserId && loginUserId === data.value.userId;

@@ -13,7 +13,7 @@
         >
           <div class="tittleBar">
             <img class="logo" src="../assets/logo.png" />
-            <div class="tittle">鱼答答</div>
+            <div class="tittle">AiQuestion</div>
           </div>
         </a-menu-item>
         <a-menu-item v-for="item in visibleRoutes" :key="item.path">

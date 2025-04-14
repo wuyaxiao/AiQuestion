@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Lynx-backend</artifactId>
+    <artifactId>AiQuestion-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Lynx-backend</name>
     <properties>

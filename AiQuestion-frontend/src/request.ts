@@ -3,12 +3,9 @@ import axios from "axios";
 /**
  * 判断当前环境
  */
-export const isDev = process.env.NODE_ENV === "development";
 
 const myAxios = axios.create({
-  baseURL: isDev
-    ? "http://localhost:8101"
-    : "https://yudada-backend-115107-5-1315421160.sh.run.tcloudbase.com",
+  baseURL: "http://110.41.130.6:8101",
   timeout: 60000,
   withCredentials: true,
 });

@@ -141,7 +141,7 @@ const handleSSETime = async () => {
   Ssesubmitting.value = true;
   // 创建SSE请求
   const eventSource = new EventSource(
-    `http://localhost:8101/api/question/ai_generate/sse?appId=${props.appId}&questionNumber=${form.questionNumber}&optionNumber=${form.optionNumber}`,
+    `http://110.41.130.6:8101/api/question/ai_generate/sse?appId=${props.appId}&questionNumber=${form.questionNumber}&optionNumber=${form.optionNumber}`,
     {
       withCredentials: true,
     }

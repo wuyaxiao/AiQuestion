@@ -156,7 +156,7 @@ const id = ref<number>();
 
 // 生成唯一id
 const generateId = async () => {
-  let res = await generateUserAnswerIdUsingGet();
+  const res = await generateUserAnswerIdUsingGet();
   if (res.data.code == 0) {
     id.value = res.data.data;
   } else {

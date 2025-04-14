@@ -1,7 +1,7 @@
 # 公共配置文件
 spring:
   application:
-    name: Lynx-backend
+    name: AiQuestion-backend
   # 默认 dev 环境
   profiles:
     active: dev
@@ -19,17 +19,17 @@ spring:
   # 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/Lynx
+    url: jdbc:mysql://110.41.130.6:3306/Lynx
     username: root
     password: wu139057
   # Redis 配置
   # 需替换配置，然后取消注释
   redis:
     database: 0
-    host: localhost
+    host: 110.41.130.6
     port: 6379
-    timeout: 5000
     password: wu139057
+    timeout: 5000
   # 文件上传
   servlet:
     multipart:
@@ -43,7 +43,7 @@ spring:
       lynx:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        jdbc-url: jdbc:mysql://localhost:3306/Lynx
+        jdbc-url: jdbc:mysql://110.41.130.6:3306/Lynx
         username: root
         password: wu139057
     # 规则配置
@@ -59,7 +59,7 @@ spring:
               algorithm-expression: user_answer_$->{appId % 2}
         tables:
           user_answer:
-            actual-data-nodes: lynx.user_answer_$->{0..1}
+            actual-data-nodes: Lynx.user_answer_$->{0..1}
             # 分表策略
             table-strategy:
               standard:
@@ -101,7 +101,7 @@ knife4j:
       default:
         api-rule: package
         api-rule-resources:
-          - com.Lynx.yudada.controller
+          - com.Lynx.AiQuestion.controller
 # AI 配置
 ai:
   apiKey: {a1b93e1b63844fae82f2f30b695ac613.z0kMosCsh1QcONkG}
